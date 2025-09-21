@@ -1,3 +1,4 @@
+import 'package:deke/test/inheriteWidgetRoute.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -5,8 +6,18 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('首页'),
+    return Center(
+      child: Column(
+        children: <Widget>[
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return InheriteWidgetTestRoute();
+                }));
+              },
+              child: const Text('InheritedDemo'))
+        ],
+      ),
     );
   }
 }
