@@ -19,15 +19,15 @@ class _WillPopScopeTestRouteState extends State<WillPopScopeTestRoute> {
         final shouldPop = await showDialog(
           context: context,
           builder: (ctx) => AlertDialog(
-            title: Text('确认退出？'),
+            title: const Text('确认退出？'),
             actions: [
               TextButton(
                 onPressed: () => Navigator.pop(ctx, false),
-                child: Text('取消'),
+                child: const Text('取消'),
               ),
               TextButton(
                 onPressed: () => Navigator.pop(ctx, true),
-                child: Text('确认'),
+                child: const Text('确认'),
               ),
             ],
           ),
