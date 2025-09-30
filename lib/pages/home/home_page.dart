@@ -1,3 +1,4 @@
+import 'package:deke/test/drag/gesture.dart';
 import 'package:deke/test/inheriteWidgetRoute.dart';
 import 'package:deke/test/inheritedProvider/providerRoute.dart';
 import 'package:deke/test/stackSizeTest/stackSizeDemo.dart';
@@ -16,7 +17,7 @@ class HomePage extends StatelessWidget {
           ElevatedButton(
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const StackSizeDemo();
+                  return const Drag();
                 }));
               },
               child: const Text('InheritedDemo'))
